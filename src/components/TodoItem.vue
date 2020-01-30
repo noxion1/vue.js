@@ -2,9 +2,16 @@
   <div class="todo-item" v-bind:class="{'is-complete':todo.completed}
   ">
     <p>
-    <input type="checkbox" v-on:change="markComplete">
-
+      <input type="checkbox" v-on:change="markComplete">
     {{todo.title}}
+    <br>
+    {{todo.description}}
+    <br>
+    <img :src="todo.image" :alt="todo.title">
+    <br>
+    €{{todo.price}}
+    <br>
+    {{todo.available}} gram available
     <button @click="$emit('del-todo', todo.id)"
      class="del">X</button>
     </p>
@@ -13,12 +20,12 @@
 
 <script>
 export default {
-  name: "TodoItem",
-  props: ["todo"],
+  name: 'TodoItem',
+  props: ['todo'],
   methods: {
-  markComplete() {
-  this.todo.completed = !this.todo.completed;
-  }
+    markComplete () {
+      this.todo.completed = !this.todo.completed
+    }
 
   }
 }
@@ -29,7 +36,7 @@ export default {
 .todo-item{
   background: #f1f1f1;
   padding: 10px;
-  border-bottom: 1px #ccc dotted;
+  border-bottom: 2px black solid;
 }
 
 .is-complete {
