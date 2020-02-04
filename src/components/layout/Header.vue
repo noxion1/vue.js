@@ -1,6 +1,7 @@
 <template>
 <header class="header">
-  <h1> TodoList </h1>
+  <h1> Management van Cannabis </h1>
+  <h5>-Leander Kuiper MD2A</h5>
 </header>
 </template>
 
@@ -15,7 +16,8 @@ export default {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 50px;
+  opacity: .9;
 }
 
 .header a {
